@@ -1,0 +1,193 @@
+:root {
+  --header-height: 90px;
+  --radius: 12px;
+  --border: 1px solid rgba(0, 0, 0, 0.15);
+  --shadow: 0 12px 24px rgba(0, 0, 0, 0.25),
+    0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-hover: 0 24px 40px rgba(0, 0, 0, 0.35),
+    0 12px 20px rgba(0, 0, 0, 0.25);
+  --pill-shadow: 0 6px 12px rgba(0, 0, 0, 0.25),
+    0 2px 6px rgba(0, 0, 0, 0.15);
+  --pill-shadow-hover: 0 12px 20px rgba(0, 0, 0, 0.35),
+    0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+section:target {
+  scroll-margin-top: var(--header-height);
+}
+
+.aboutWrap {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 1px solid white;
+  box-shadow: 0 0 16px 20px rgba(0, 0, 0, 0.25);
+}
+
+.aboutText p {
+  margin: 0 0 0.75rem;
+}
+
+.grid,
+.infoGrid,
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.box,
+.infoBox,
+.project,
+.contactBox {
+  --lift: -8px;
+  padding: 16px;
+  border-radius: var(--radius);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.box {
+  --lift: -10px;
+}
+
+.box:hover,
+.infoBox:hover,
+.project:hover,
+.contactBox:hover {
+  transform: translateY(var(--lift));
+  box-shadow: var(--shadow-hover);
+}
+
+.small {
+  margin: 4px 0 10px;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.tag {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.skillsWrap {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill,
+.chip {
+  --pill-lift: -4px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: var(--border);
+  box-shadow: var(--pill-shadow);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chip {
+  --pill-lift: -3px;
+}
+
+.skill:hover,
+.chip:hover {
+  transform: translateY(var(--pill-lift));
+  box-shadow: var(--pill-shadow-hover);
+}
+
+.infoChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.infoText {
+  margin: 10px 0 0;
+}
+
+.projectList {
+  margin: 10px 0;
+  padding-left: 18px;
+}
+
+.projectLink {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+
+.contactList li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contactList a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contactList a:hover {
+  text-decoration: underline;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.icon.github {
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contactList li:hover .icon.github {
+  transform: translateY(-1px);
+  opacity: 1;
+}
+.projectLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .aboutWrap {
+    flex-direction: column;
+    align-items: center;
+  }
+}
