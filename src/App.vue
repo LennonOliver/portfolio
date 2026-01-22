@@ -6,7 +6,7 @@ import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <Header firstname="Olivier" lastname="Hollebeke" title="Développeur web" email="hollebekeolivier@gmail.com" />
+  <Header firstname="Olivier" lastname="Hollebeke" title="Étudiant en informatique" email="hollebekeolivier@gmail.com" />
 
   <main class="container">
     <Section id="about" title="À propos">
