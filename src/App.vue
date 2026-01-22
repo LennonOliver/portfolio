@@ -6,7 +6,8 @@ import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <Header firstname="Olivier" lastname="Hollebeke" title="Étudiant en informatique" email="hollebekeolivier@gmail.com" />
+ <Header firstname="Olivier" lastname="Hollebeke" title="Étudiant en informatique"
+    email="hollebekeolivier@gmail.com" />
 
   <main class="container">
     <Section id="about" title="À propos">
@@ -64,20 +65,113 @@ import Footer from './components/Footer.vue';
           </p>
         </article>
       </div>
-    </Section>
+   </Section>
 
-    <Section id="skills" title="Compétences">
+  <Section id="skills" title="Compétences">
       <div class="skillsWrap">
+        <div class="skillsCategories">
+
+          <div class="skillsCard">
+            <h3>Langages</h3>
+
+  
         <div class="skillsGrid">
-          <span class="skill">HTML / CSS</span>
+             <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+
+  
           <span class="skill">JavaScript</span>
+             <span class="skill">PHP</span>
+              <span class="skill">C#</span>
+              <span class="skill">Python</span>
+            </div>
+          </div>
+
+          <div class="skillsCard">
+            <h3>Front-end</h3>
+            <div class="skillsGrid">
+
+  
           <span class="skill">Vue.js</span>
-          <span class="skill">Réseaux (TCP/IP)</span>
-          <span class="skill">Systèmes Linux</span>
+             <span class="skill">Angular</span>
+              <span class="skill">Responsive design</span>
+              <span class="skill">Accessibilité (bases)</span>
+            </div>
+          </div>
+
+          <div class="skillsCard">
+            <h3>Back-end</h3>
+            <div class="skillsGrid">
+              <span class="skill">Node.js</span>
+              <span class="skill">Express.js</span>
+              <span class="skill">NestJS</span>
+              <span class="skill">API REST</span>
+            </div>
+          </div>
+
+          <div class="skillsCard">
+            <h3>Bases de données</h3>
+            <div class="skillsGrid">
+              <span class="skill">MySQL</span>
+              <span class="skill">MongoDB</span>
+              <span class="skill">MCD / MLD / MPD</span>
+              <span class="skill">UML</span>
+            </div>
+          </div>
+
+          <div class="skillsCard">
+            <h3>Systèmes & réseaux</h3>
+            <div class="skillsGrid">
+              <span class="skill">TCP/IP</span>
+              <span class="skill">Sécurisation réseaux</span>
+              <span class="skill">Cisco Packet Tracer</span>
+              <span class="skill">Linux (Ubuntu Server)</span>
+            </div>
+          </div>
+
+          <div class="skillsCard">
+            <h3>Outils</h3>
+            <div class="skillsGrid">
+
+  
           <span class="skill">Git / GitHub</span>
+             <span class="skill">Ligne de commande</span>
+
+  
           <span class="skill">Virtualisation</span>
-        </div>
-      </div>
+             <span class="skill">Odoo (notions)</span>
+            </div>
+          </div>
+
+          <div class="skillsCard">
+            <h3>Méthodes & gestion</h3>
+            <div class="skillsGrid">
+              <span class="skill">Gestion de projet</span>
+              <span class="skill">E-business</span>
+              <span class="skill">Analyse fonctionnelle</span>
+              <span class="skill">Travail en équipe</span>
+            </div>
+          </div>
+
+          <div class="skillsCard">
+            <h3>Matériel & OS</h3>
+            <div class="skillsGrid">
+              <span class="skill">Structure des ordinateurs</span>
+              <span class="skill">Montage PC</span>
+              <span class="skill">Installation systèmes</span>
+              <span class="skill">Configuration & pilotes</span>
+            </div>
+          </div>
+
+
+
+   </div>
+
+        <p class="skillsNote">
+          Compétences acquises en formation et par projets personnels, avec un niveau variable selon les technologies.
+        </p>
+
+  </div>
     </Section>
 
     <Section id="info" title="Infos">
