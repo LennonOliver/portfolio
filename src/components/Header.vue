@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
 
 defineProps({
   firstname: String,
@@ -18,12 +18,48 @@ const links = [
 ];
 
 const isOpen = ref(false);
-const toggleMenu = () => (isOpen.value = !isOpen.value);
-const closeMenu = () => (isOpen.value = false);
+const headerEl = ref(null);
+
+let ro = null;
+
+const setHeaderHeight = () => {
+  if (!headerEl.value) return;
+  const h = headerEl.value.getBoundingClientRect().height;
+  document.documentElement.style.setProperty("--header-height", `${Math.ceil(h)}px`);
+};
+
+const toggleMenu = async () => {
+  isOpen.value = !isOpen.value;
+  await nextTick();
+  setHeaderHeight();
+};
+
+const closeMenu = async () => {
+  isOpen.value = false;
+  await nextTick();
+  setHeaderHeight();
+};
+
+const onResize = () => setHeaderHeight();
+
+onMounted(async () => {
+  await nextTick();
+  setHeaderHeight();
+
+  ro = new ResizeObserver(() => setHeaderHeight());
+  if (headerEl.value) ro.observe(headerEl.value);
+
+  window.addEventListener("resize", onResize);
+});
+
+onBeforeUnmount(() => {
+  if (ro) ro.disconnect();
+  window.removeEventListener("resize", onResize);
+});
 </script>
 
 <template>
-  <header class="siteHeader">
+  <header ref="headerEl" class="siteHeader">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-between py-3 gap-2">
         <a href="#top" class="brand nav-link text-decoration-none" @click="closeMenu">
@@ -53,12 +89,7 @@ const closeMenu = () => (isOpen.value = false);
         </nav>
 
         <Transition name="mobileNav">
-          <nav
-            v-if="isOpen"
-            id="mobileNav"
-            class="mobileNav d-md-none"
-            aria-label="Navigation mobile"
-          >
+          <nav v-if="isOpen" id="mobileNav" class="mobileNav d-md-none" aria-label="Navigation mobile">
             <ul class="nav nav-pills flex-column">
               <li v-for="link in links" :key="link.id" class="nav-item">
                 <a class="nav-link" :href="`#${link.id}`" @click="closeMenu">
@@ -155,9 +186,11 @@ const closeMenu = () => (isOpen.value = false);
 .burger.open span:nth-child(1) {
   transform: translateY(1px);
 }
+
 .burger.open span:nth-child(2) {
   opacity: 0.6;
 }
+
 .burger.open span:nth-child(3) {
   transform: translateY(-1px);
 }

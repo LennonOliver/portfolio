@@ -16,6 +16,7 @@ section:target {
   scroll-margin-top: var(--header-height);
 }
 
+
 .aboutWrap {
   display: flex;
   gap: 1rem;
