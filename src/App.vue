@@ -238,7 +238,7 @@ import Footer from './components/Footer.vue';
 
           <div class="projectLinks">
             <a class="projectLink" href="https://github.com/LennonOliver/BookFlow" target="_blank" rel="noopener">
-              Voir le projet sur GitHub
+             Voir le projet sur GitHub
             </a>
 
             <a class="projectLink" href="https://projet-web-olivier-hollebeke.vercel.app/" target="_blank"
