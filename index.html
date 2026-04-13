@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olivier Hollebeke | Portfolio Premium</title>
+  <meta name="description" content="Portfolio d'Olivier Hollebeke. Développeur de solutions premium et modernes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Dynamic Orbs for Glassmorphism Backdrop -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="glass-nav fade-in">
+    <div class="nav-content">
+      <div class="logo">OH.</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#projects">Projets</a></li>
+      </ul>
+      <button class="mobile-toggle" aria-label="Ouvrir le menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-container container">
+      <div class="hero-text glass-card fade-in" data-parallax="0.03">
+        <h2 class="greeting">Bonjour, je suis</h2>
+        <h1 class="name">Olivier Hollebeke</h1>
+        <p class="tagline">Créateur d'expériences numériques immersives & premium.</p>
+        <a href="#projects" class="btn">Découvrir mes projets</a>
+      </div>
+      <div class="hero-image-wrapper fade-in" data-parallax="-0.02">
+        <img src="https://github.com/LennonOliver.png" alt="Olivier Hollebeke" class="profile-pic tilt-effect">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-content glass-card fade-in tilt-effect">
+        <h2 class="section-title">À propos de moi</h2>
+        <p>Passionné par l'univers IT dans sa globalité, je m'intéresse davantage à la compréhension des technologies, des écosystèmes et des infrastructures plutôt qu'au code pur. Mon expertise et ma curiosité s'orientent vers l'analyse, l'intégration fonctionnelle et la maîtrise des nouvelles tendances.</p>
+        <p>J'aborde chaque étape d'un projet avec un sens du détail aiguisé. Toujours en quête d'optimisation, j'aime décortiquer les solutions logicielles et je m'appuie très naturellement sur les outils d'<strong>Intelligence Artificielle</strong> pour décupler mon efficacité, accélérer mon apprentissage et résoudre des problématiques complexes.</p>
+        <p class="hobbies">Mes centres d'intérêt incluent la <strong>guitare</strong> (j'ai d'ailleurs eu la très belle opportunité de l'enseigner en tant qu'animateur au sein de l'ASBL <em>Le chêne de l'écureuil</em>), les <strong>jeux vidéos</strong>, et l'exploration continue du <strong>hardware</strong>, des <strong>nouvelles technologies</strong> et des dernières innovations.</p>
+        <p class="languages" style="margin-top: 1.5rem;">Grand passionné par la culture japonaise et fana de <strong>mangas</strong>, j'étudie activement le <strong>japonais</strong> (lecture, écriture, oral - niveau ~N5). J'améliore aussi continuellement mon <strong>anglais</strong> en lisant des comics en VO pour le plaisir, et je possède des bases en <strong>néerlandais</strong> que j'ai l'ambition d'approfondir très prochainement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parcours Section -->
+  <section id="parcours" class="parcours-section">
+    <div class="container">
+      <h2 class="section-title fade-in" style="text-align: center; margin-bottom: 3rem;">Mon Parcours</h2>
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-content glass-card tilt-effect">
+            <h3>Conseiller Commercial & Product Expert</h3>
+            <p>Expertise produit et accompagnement client avec un fort sens du détail informatisé.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-content glass-card tilt-effect">
+            <h3>Animateur et Professeur de Guitare</h3>
+            <p><strong>ASBL Le chêne de l'écureuil</strong><br>Partage de ma passion pour la musique et accompagnement pédagogique.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-content glass-card tilt-effect">
+            <h3>Études en Informatique de Gestion</h3>
+            <p><strong>IEPSM Mouscron</strong><br>Bachelier conférant des fondations solides en développement et systèmes d'information.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2 class="section-title fade-in">Mes Projets</h2>
+      <div class="projects-grid">
+        
+        <!-- Project ZenKanban -->
+        <div class="project-card glass-card fade-in tilt-effect">
+          <div class="project-content">
+            <h3 class="project-title">ZenKanban ✨</h3>
+            <p class="project-desc">Un tableau Kanban élégant, premium et entièrement responsive. Doté d'une interface "Glassmorphism", de micro-interactions fluides et d'un Dark Mode natif.</p>
+            <div class="tags">
+              <span class="tag">Vue 3</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Glassmorphism</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/LennonOliver/ZenKanban" target="_blank" class="project-link github-btn">Code Source</a>
+              <a href="https://zen-kanban.vercel.app/" target="_blank" class="project-link live-btn">Essayer l'app</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project BookFlow -->
+        <div class="project-card glass-card fade-in tilt-effect">
+          <div class="project-content">
+            <h3 class="project-title">BookFlow 📚</h3>
+            <p class="project-desc">Plateforme intuitive de gestion et de suivi de lecture. Design épuré, suivi de progression précis et catégorisation intelligente des oeuvres.</p>
+            <div class="tags">
+              <span class="tag">App Web</span>
+              <span class="tag">Responsive</span>
+              <span class="tag">UI/UX</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/LennonOliver/BookFlow" target="_blank" class="project-link github-btn">Code Source</a>
+              <a href="https://projet-web-olivier-hollebeke.vercel.app/" target="_blank" class="project-link live-btn">Essayer l'app</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="glass-footer fade-in">
+    <p>&copy; 2026 Olivier Hollebeke. Tous droits réservés.</p>
+    <div class="social-links">
+      <a href="https://github.com/LennonOliver" target="_blank">Profil GitHub</a>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
